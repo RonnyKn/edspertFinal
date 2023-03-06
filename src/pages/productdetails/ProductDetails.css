@@ -1,0 +1,125 @@
+.product__details-hero {
+  background: linear-gradient(rgba(0, 0, 0, .562), rgba(0, 0, 0, .562)), url('../../assets/images/shop-hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .4);
+}
+
+.product__details-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.product__details-ratings {
+  color: grey;
+}
+
+.product__details-ratings span {
+  color: salmon !important;
+  font-weight: bold;
+}
+
+.product__details-price {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.product__details-price h5 {
+  font-size: 1.2rem;
+}
+
+.product__details-price span {
+  color: salmon;
+  font-weight: bold;
+}
+
+.product__details-right button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__details-description {
+  font-size: .9rem;
+  text-align: justify;
+}
+
+.tab-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tab-title span {
+  font-weight: bold;
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+.content-description {
+  text-align: justify;
+}
+
+.content-reviews {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: .5em 0;
+}
+
+.content-reviews div div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-reviews img {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.btn-tab {
+  border-radius: .3rem .3rem 0 0 !important;
+}
+
+.tab-content {
+  border: 2px solid var(--color-primary);
+  padding: 1rem;
+  border-radius: 0 .3rem .3rem .3rem;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .4);
+}
+
+.tab-content p {
+  font-size: .9rem;
+}
+
+.reviews-rating span {
+  color: salmon;
+  font-weight: bold;
+}
+
+.reviews-text {
+  color: grey;
+}
+
+/* ===========MEDIA QUERIES========= */
+@media screen and (max-width:768px) {
+  .product__details-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .product__details-hero h1 {
+    font-size: 1.3rem;
+  }
+}

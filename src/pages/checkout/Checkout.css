@@ -1,0 +1,75 @@
+.checkout-title {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.checkout-left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-left form input,
+.checkout-left form textarea {
+  outline: auto;
+  padding: .5rem;
+}
+
+.checkout-left button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.checkout-left label {
+  margin-top: .5em;
+  font-size: .8rem;
+}
+
+/* ================checkOutItems============= */
+.checkOutItems-container {
+  height: 400px;
+  overflow: scroll;
+
+}
+
+.checkOutItems {
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: center;
+  padding: .5rem 0;
+
+}
+
+.checkOutItems-left {
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+}
+
+.checkOutItems-left img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.checkOutItems-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* =============MEDIA QUERIES======== */
+@media screen and (max-width:768px) {
+  .checkout-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik+Puddles&display=swap');
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, .7);
+  color: black;
+  height: 5rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, .4);
+  z-index: 99;
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.title1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+}
+
+.title2 {
+  font-family: 'Rubik Puddles', cursive;
+  font-size: 1.8rem;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-navicons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-navicons img {
+  width: 2.2rem;
+  cursor: pointer;
+}
+
+.nav-active {
+  border-bottom: 2px solid black;
+}
+
+.header-cart {
+  position: relative;
+}
+
+.header-cart span {
+  display: block;
+  color: var(--color-white);
+  font-size: .7rem;
+  position: absolute;
+  right: 0;
+  top: -50%;
+  padding: .3rem;
+  border-radius: 50%;
+  background: red;
+}
+
+.header-menu {
+  display: none;
+}
+
+/* =============MEDIA QUERIES=========== */
+@media screen and (max-width:550px) {
+  .header-nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: rgba(10, 29, 56, .9);
+    color: var(--color-white);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transform-origin: top;
+    animation: animateNavbar 600ms ease forwards;
+  }
+
+  @keyframes animateNavbar {
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+      transition: var(--transition);
+    }
+  }
+
+  .nav-show {
+    display: flex;
+  }
+
+  .nav-hide {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+  }
+
+  .nav-active {
+    border-bottom: 2px solid var(--color-white);
+  }
+}
